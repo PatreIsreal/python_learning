@@ -1,13 +1,15 @@
 while True:
     try:
         N = int(input())
-        i = 0
         for i in range(N):
-            data = int(input()).split()
-            if N == 0:
-                break
-            res = sum(data)
-            print(res)
-    
+            inputs = input().split()
+            M = int(inputs[0])
+            total = 0
+            for j in range(M):
+                total += int(inputs[j+1])
+            print(total)
+        
+        if i < N-1:
+            print()
     except:
         break
