@@ -1,15 +1,10 @@
 while True:
     try:
-        N = int(input())
-        for i in range(N):
-            inputs = input().split()
-            M = int(inputs[0])
-            total = 0
-            for j in range(M):
-                total += int(inputs[j+1])
-            print(total)
-        
-        if i < N-1:
-            print()
+        n = int(input())
+        for i in range(n):
+            line = list(map(int,input().split()))
+        print(line[-1:1:0])
+        print(line[0:2:-1])
+    
     except:
         break
