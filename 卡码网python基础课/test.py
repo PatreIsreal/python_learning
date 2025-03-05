@@ -1,16 +1,29 @@
 while True:
     try:
-        # 获取用户输入的正方形边长
-        n = int(input())
-
-        # 循环打印每一行
-        for row in range(n):
-            if row == 0 or row == n-1:
-                # 第一行和最后一行打印完整的“*”
-                print("*" * n)
+        s = list(input().split())
+        total = 0
+        n = len(s)
+        valid_grades = True
+        
+        for grade in s:
+            if grade == "A":
+                total += 4
+            elif grade == "B":
+                total += 3
+            elif grade == "C":
+                total += 2
+            elif grade == "D":
+                total += 1
+            elif grade == "F":
+                total += 0
             else:
-                # 中间行打印“*”加空格再加“*”
-                print("*" + " " * (n-2) + "*")
+                print("Unknown")
+                valid_grades = False
+                break
+        
+        if valid_grades:
+            average = total / n
+            print(f"{average:.2f}")
     except:
         break
 
